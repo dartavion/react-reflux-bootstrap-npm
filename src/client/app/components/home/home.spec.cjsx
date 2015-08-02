@@ -1,5 +1,6 @@
 React = require 'react'
-Home = React.createFactory require './home.cjsx'
+Home = require './home.cjsx'
+HomeFactory = React.createFactory Home
 TestUtils = require('react/addons').addons.TestUtils
 TestHelpers = require('../../../test/helpers')
 
@@ -9,7 +10,7 @@ describe 'Hello View', ->
 
   beforeEach ->
     handleClick = TestHelpers.stubMethod(Home, "handleClick")
-    $home = React.render Home(), @container
+    $home = React.render HomeFactory(), @container
 
   it 'said hello', (done) ->
     hello = React.findDOMNode($home.refs.hello)

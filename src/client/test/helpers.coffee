@@ -12,7 +12,7 @@ getClassPrototype = (_class) ->
   ###
 
   try
-    return _class.type.prototype
+    return _class.prototype
   catch e
     throw new Error('Couldn\'t get the component\'s prototype')
   return
