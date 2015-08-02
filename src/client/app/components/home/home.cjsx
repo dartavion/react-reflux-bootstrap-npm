@@ -1,14 +1,23 @@
 React = require 'react'
-Reflux = require 'reflux'
 
-render = ->
-  return (
-    # jshint ignore:start
-    <div>Hello</div>
-    # jshint ignore:end
-  )
+module.exports = React.createClass
 
-Home = React.createClass
-  render: render
+  getInitialState: ->
+    data:
+      hello: 'Hello'
 
-module.exports = Home
+  handleClick: ->
+    @setState
+      data:
+        hello: 'Welcome!'
+
+  render: ->
+    return (
+      # jshint ignore:start
+      <div>
+        <div ref="hello">{@state.data.hello}</div>
+        <button ref="sayHello" type="button" onClick={@handleClick}>Say It!!!</button>
+      </div>
+      # jshint ignore:end
+    )
+

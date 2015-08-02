@@ -1,5 +1,17 @@
-### react-reflux-bootstrap-npm
+####An express coffeescript setup for react, cjsx and testing
 
-run ``npm install && npm run build-site`` 
+Prod build
+``npm run build``
 
-If there is a problem building checkout https://github.com/andreypopp/react-app-express/issues/1
+Dev has watchers for the client cjsx and styles
+``npm run start:dev``
+
+Testing uses mocha, chai, sinon with istanbul coverage
+``npm test``
+
+Test setup and helpers from: git@github.com:NiGhTTraX/react-test-buffet.git 
+
+TODO: 
+Redis setup
+Heroku
+More Tests
