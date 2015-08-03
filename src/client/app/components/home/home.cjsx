@@ -16,7 +16,7 @@ module.exports = React.createClass
       # jshint ignore:start
       <div>
         <div ref="hello">{@state.data.hello}</div>
-        <button class="btn btn-primary" ref="sayHello" type="button" onClick={@handleClick}>Say It!!!</button>
+        <button className="btn btn-primary" ref="sayHello" type="button" onClick={@handleClick}>Say It!!!</button>
       </div>
       # jshint ignore:end
     )

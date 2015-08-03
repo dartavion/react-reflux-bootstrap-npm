@@ -1,5 +1,5 @@
 'use strict'
-### istanbul ignore next ###
+
 #useDEV = (cb) ->
 #  setTimeout () ->
 #    dbInfo =

@@ -18,6 +18,8 @@ describe 'Hello View', ->
     done()
 
   it 'should say hello', (done) ->
+    hello = React.findDOMNode($home.refs.hello)
     TestUtils.Simulate.click($home.refs.sayHello.getDOMNode())
     expect(handleClick).to.have.been.called
+    expect(hello.textContent).to.equal($home.state.data.hello)
     done()
