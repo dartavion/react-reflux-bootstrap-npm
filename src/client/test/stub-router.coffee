@@ -1,5 +1,5 @@
 'use strict'
-
+### istanbul ignore next ###
 StubRouterContext = (Component, props, stubs) ->
 
   RouterStub = ->
@@ -31,5 +31,5 @@ StubRouterContext = (Component, props, stubs) ->
       }
     render: ->
       React.createElement Component, props
-
+### istanbul ignore next ###
 module.exports = StubRouterContext

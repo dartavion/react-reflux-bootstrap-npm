@@ -1,8 +1,9 @@
 'use strict'
-
+### istanbul ignore next ###
 path = require 'path'
+### istanbul ignore next ###
 _ = require 'lodash'
-
+### istanbul ignore next ###
 module.exports = _.merge(
   all =
     env: process.env.NODE_ENV

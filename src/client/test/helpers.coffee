@@ -1,6 +1,8 @@
+### istanbul ignore next ###
 TestUtils = require('react/addons').addons.TestUtils
+### istanbul ignore next ###
 React = require('react')
-
+### istanbul ignore next ###
 getClassPrototype = (_class) ->
 
   ###*
@@ -16,7 +18,7 @@ getClassPrototype = (_class) ->
   catch e
     throw new Error('Couldn\'t get the component\'s prototype')
   return
-
+### istanbul ignore next ###
 getMethodLocation = (_class, method) ->
 
   ###*
@@ -42,7 +44,7 @@ getMethodLocation = (_class, method) ->
     return proto
   throw new Error('Could not find method `' + method + '` on the class ' + 'prototype')
   return
-
+### istanbul ignore next ###
 module.exports.spyOnMethod = (_class, method) ->
 
   ###*
@@ -58,7 +60,7 @@ module.exports.spyOnMethod = (_class, method) ->
 
   methodLoc = getMethodLocation(_class, method)
   sandbox.spy methodLoc, method
-
+### istanbul ignore next ###
 module.exports.stubMethod = (_class, method, resp) ->
 
   ###*
@@ -74,7 +76,7 @@ module.exports.stubMethod = (_class, method, resp) ->
 
   methodLoc = getMethodLocation(_class, method)
   sandbox.stub(methodLoc, method).returns resp
-
+### istanbul ignore next ###
 module.exports.genComponentStub = (path) ->
   `var React`
 
@@ -94,7 +96,7 @@ module.exports.genComponentStub = (path) ->
   stubs = {}
   stubs[path] = dummy
   stubs
-
+### istanbul ignore next ###
 module.exports.simulateTyping = (ref, value) ->
 
   ###*
@@ -111,7 +113,7 @@ module.exports.simulateTyping = (ref, value) ->
   node.value = value
   TestUtils.Simulate.change node
   return
-
+### istanbul ignore next ###
 module.exports.render = (Component, fixture, container) ->
 
   ###*
