@@ -4,6 +4,6 @@ countActions = require('../actions/count-actions')
 
 module.exports = Reflux.createStore
 
-  count: (count) ->
-    @trigger(count)
+  count: () =>
+    @counter += 1
 
